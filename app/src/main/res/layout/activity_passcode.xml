@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/splash"
+    tools:ignore="MissingPrefix"
+    tools:context="in.codehex.office.PasscodeActivity">
+
+    <ImageView
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/light"/>
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="20dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/layout_dobtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <EditText
+                fontPath="fonts/latoregular.ttf"
+                android:singleLine="true"
+                android:drawableRight="@drawable/key"
+                android:textSize="@dimen/text_size_large"
+                android:id="@+id/passcode_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/passcode"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:textColor="@color/icons" />
+            ​
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            fontPath="fonts/latoregular.ttf"
+            android:background="@color/accent"
+            android:id="@+id/submit_button"
+            android:layout_margin="@dimen/primary_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"/>
+    </LinearLayout>
+
+</RelativeLayout>

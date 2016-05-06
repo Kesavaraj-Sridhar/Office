@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    android:orientation="vertical"
+    android:weightSum="4"
+    tools:context="in.codehex.office.MainActivity"
+    tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1.4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/offices" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="2.1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    fontFamily="fonts/latobold.ttf"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:padding="@dimen/primary_padding"
+                    android:text="@string/name"
+                    android:textColor="@color/accent" />
+
+                <EditText
+                    android:id="@+id/name_edit_text"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_text_color"
+                    android:background="#00000000"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.25"
+                    android:imeOptions="actionNext"
+                    android:paddingRight="@dimen/secondary_padding" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    fontFamily="fonts/latobold.ttf"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:padding="@dimen/primary_padding"
+                    android:text="URL"
+                    android:textColor="@color/accent" />
+
+                <EditText
+                    android:id="@+id/url_edit_text"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/edit_text_color"
+                    android:background="#00000000"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.25"
+                    android:paddingRight="@dimen/secondary_padding" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    fontFamily="fonts/latobold.ttf"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:padding="@dimen/primary_padding"
+                    android:text="@string/company_contact"
+                    android:textColor="@color/accent" />
+
+                <EditText
+                    android:id="@+id/company_contact_edit_text"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/edit_text_color"
+                    android:background="#00000000"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.25"
+                    android:paddingRight="@dimen/secondary_padding" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    fontFamily="fonts/latobold.ttf"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:padding="@dimen/primary_padding"
+                    android:text="Street"
+                    android:textColor="@color/accent" />
+
+                <EditText
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:id="@+id/street_edit_text"
+                    android:textColor="@color/edit_text_color"
+                    android:background="#00000000"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.25"
+                    android:paddingRight="@dimen/secondary_padding" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+            <LinearLayout
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:padding="@dimen/primary_padding"
+                    android:layout_weight="0.75"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/city"
+                    fontFamily="fonts/latobold.ttf"
+                    android:textColor="@color/accent"/>
+                <EditText
+                    android:id="@+id/city_edit_text"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/edit_text_color"
+                    android:background="#00000000"
+                    android:paddingRight="@dimen/secondary_padding"
+                    android:layout_weight="1.25"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+            <LinearLayout
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:padding="@dimen/primary_padding"
+                    android:layout_weight="0.75"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/state"
+                    fontFamily="fonts/latobold.ttf"
+                    android:textColor="@color/accent"/>
+                <EditText
+                    android:id="@+id/state_edit_text"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/edit_text_color"
+                    android:background="#00000000"
+                    android:paddingRight="@dimen/secondary_padding"
+                    android:layout_weight="1.25"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+            <LinearLayout
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:padding="@dimen/primary_padding"
+                    android:layout_weight="0.75"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/country"
+                    fontFamily="fonts/latobold.ttf"
+                    android:textColor="@color/accent"/>
+                <EditText
+                    android:id="@+id/country_edit_text"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/edit_text_color"
+                    android:background="#00000000"
+                    android:paddingRight="@dimen/secondary_padding"
+                    android:layout_weight="1.25"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+            <LinearLayout
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:padding="@dimen/primary_padding"
+                    android:layout_weight="0.75"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zip_code"
+                    fontFamily="fonts/latobold.ttf"
+                    android:textColor="@color/accent"/>
+                <EditText
+                    android:id="@+id/zip_code_edit_text"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    android:maxLength="6"
+                    android:textColor="@color/edit_text_color"
+                    android:background="#00000000"
+                    android:paddingRight="@dimen/secondary_padding"
+                    android:layout_weight="1.25"
+                    android:layout_width="1dp"
+                    android:inputType="number"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"/>
+            <LinearLayout
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:padding="@dimen/primary_padding"
+                    android:layout_weight="0.75"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:text="Role"
+                    fontFamily="fonts/latobold.ttf"
+                    android:textColor="@color/accent"/>
+                <Spinner
+                    android:id="@+id/role_spinner"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:spinnerMode="dialog"
+                    android:prompt="@string/role"
+                    android:entries="@array/role_spinner"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0.5"
+        android:background="@color/button_bg"
+        android:src="@drawable/oksd" />
+
+</LinearLayout>

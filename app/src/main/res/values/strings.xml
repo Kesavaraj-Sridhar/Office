@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Office</string>
+    <string name="passcode">Enter Passcode</string>
+    <string name="role">Select Your Role</string>
+    <string name="name">Name</string>
+    <string name="company_contact">Company-Contact</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="country">Country</string>
+    <string name="zip_code">Zip Code</string>
+    <string-array name="role_spinner">
+        <item>Buyer</item>
+        <item>Seller</item>
+    </string-array>
+</resources>
