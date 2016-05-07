@@ -11,6 +11,8 @@
     tools:context="in.codehex.office.SplashScreenActivity">
 
    <ImageView
+       android:id="@+id/logo_image_view"
+       android:transitionName="@string/trans_img"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_centerInParent="true"

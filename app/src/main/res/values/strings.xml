@@ -12,4 +12,6 @@
         <item>Buyer</item>
         <item>Seller</item>
     </string-array>
+    <string name="trans_img">image</string>
+    <string name="email">E-Mail ID</string>
 </resources>

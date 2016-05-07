@@ -1,8 +1,11 @@
 package in.codehex.office;
 
 import android.content.Intent;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

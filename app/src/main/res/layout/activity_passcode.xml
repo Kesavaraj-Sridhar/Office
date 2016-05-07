@@ -12,6 +12,7 @@
     tools:context="in.codehex.office.PasscodeActivity">
 
     <ImageView
+        android:transitionName="@string/trans_img"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
