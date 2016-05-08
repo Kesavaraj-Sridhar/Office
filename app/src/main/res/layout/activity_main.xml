@@ -12,14 +12,14 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_weight="1.4"
+        android:layout_weight="1.2"
         android:scaleType="centerCrop"
         android:src="@drawable/offices" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_weight="2.1">
+        android:layout_weight="2.3">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,6 +27,7 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:padding="@dimen/primary_padding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -37,7 +38,6 @@
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
-                    android:padding="@dimen/primary_padding"
                     android:text="@string/name"
                     android:textColor="@color/accent" />
 
@@ -45,18 +45,18 @@
                     android:id="@+id/name_edit_text"
                     android:singleLine="true"
                     android:textColor="@color/edit_text_color"
-                    android:background="#00000000"
+                    android:background="@color/edit_text_bgcolor"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.25"
-                    android:imeOptions="actionNext"
-                    android:paddingRight="@dimen/secondary_padding" />
+                    android:imeOptions="actionNext" />
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
+                android:padding="@dimen/primary_padding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -67,7 +67,6 @@
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
-                    android:padding="@dimen/primary_padding"
                     android:text="@string/email"
                     android:textColor="@color/accent" />
 
@@ -75,12 +74,11 @@
                     android:id="@+id/email_id_edit_text"
                     android:singleLine="true"
                     android:textColor="@color/edit_text_color"
-                    android:background="#00000000"
+                    android:background="@color/edit_text_bgcolor"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.25"
                     android:imeOptions="actionNext"
-                    android:paddingRight="@dimen/secondary_padding"
                     android:inputType="textEmailAddress" />
             </LinearLayout>
             <View
@@ -88,6 +86,7 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
+                android:padding="@dimen/primary_padding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -98,7 +97,6 @@
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
-                    android:padding="@dimen/primary_padding"
                     android:text="URL"
                     android:textColor="@color/accent" />
 
@@ -107,17 +105,17 @@
                     android:singleLine="true"
                     android:imeOptions="actionNext"
                     android:textColor="@color/edit_text_color"
-                    android:background="#00000000"
+                    android:background="@color/edit_text_bgcolor"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.25"
-                    android:paddingRight="@dimen/secondary_padding" />
+                    android:layout_weight="1.25"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
+                android:padding="@dimen/primary_padding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -128,7 +126,6 @@
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
-                    android:padding="@dimen/primary_padding"
                     android:text="@string/company_contact"
                     android:textColor="@color/accent" />
 
@@ -139,17 +136,17 @@
                     android:inputType="number"
                     android:maxLength="10"
                     android:textColor="@color/edit_text_color"
-                    android:background="#00000000"
+                    android:background="@color/edit_text_bgcolor"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.25"
-                    android:paddingRight="@dimen/secondary_padding" />
+                    android:layout_weight="1.25"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
+                android:padding="@dimen/primary_padding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -160,7 +157,6 @@
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
-                    android:padding="@dimen/primary_padding"
                     android:text="Street"
                     android:textColor="@color/accent" />
 
@@ -169,24 +165,23 @@
                     android:singleLine="true"
                     android:id="@+id/street_edit_text"
                     android:textColor="@color/edit_text_color"
-                    android:background="#00000000"
+                    android:background="@color/edit_text_bgcolor"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.25"
-                    android:paddingRight="@dimen/secondary_padding" />
+                    android:layout_weight="1.25"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
+                android:padding="@dimen/primary_padding"
                 android:weightSum="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:padding="@dimen/primary_padding"
                     android:layout_weight="0.75"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
@@ -198,8 +193,7 @@
                     android:singleLine="true"
                     android:imeOptions="actionNext"
                     android:textColor="@color/edit_text_color"
-                    android:background="#00000000"
-                    android:paddingRight="@dimen/secondary_padding"
+                    android:background="@color/edit_text_bgcolor"
                     android:layout_weight="1.25"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content" />
@@ -209,13 +203,13 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
+                android:padding="@dimen/primary_padding"
                 android:weightSum="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:padding="@dimen/primary_padding"
                     android:layout_weight="0.75"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
@@ -227,8 +221,7 @@
                     android:singleLine="true"
                     android:imeOptions="actionNext"
                     android:textColor="@color/edit_text_color"
-                    android:background="#00000000"
-                    android:paddingRight="@dimen/secondary_padding"
+                    android:background="@color/edit_text_bgcolor"
                     android:layout_weight="1.25"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content" />
@@ -238,13 +231,13 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
+                android:padding="@dimen/primary_padding"
                 android:weightSum="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:padding="@dimen/primary_padding"
                     android:layout_weight="0.75"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
@@ -256,8 +249,7 @@
                     android:singleLine="true"
                     android:imeOptions="actionNext"
                     android:textColor="@color/edit_text_color"
-                    android:background="#00000000"
-                    android:paddingRight="@dimen/secondary_padding"
+                    android:background="@color/edit_text_bgcolor"
                     android:layout_weight="1.25"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content" />
@@ -267,13 +259,13 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
+                android:padding="@dimen/primary_padding"
                 android:weightSum="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:padding="@dimen/primary_padding"
                     android:layout_weight="0.75"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
@@ -286,8 +278,7 @@
                     android:imeOptions="actionDone"
                     android:maxLength="6"
                     android:textColor="@color/edit_text_color"
-                    android:background="#00000000"
-                    android:paddingRight="@dimen/secondary_padding"
+                    android:background="@color/edit_text_bgcolor"
                     android:layout_weight="1.25"
                     android:layout_width="1dp"
                     android:inputType="number"
@@ -298,17 +289,17 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
+                android:padding="@dimen/primary_padding"
                 android:weightSum="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:padding="@dimen/primary_padding"
                     android:layout_weight="0.75"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
-                    android:text="Role"
+                    android:text="@string/roletext"
                     fontFamily="fonts/latobold.ttf"
                     android:textColor="@color/accent"/>
                 <Spinner

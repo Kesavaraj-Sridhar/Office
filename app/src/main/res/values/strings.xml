@@ -3,7 +3,7 @@
     <string name="passcode">Enter Passcode</string>
     <string name="role">Select Your Role</string>
     <string name="name">Name</string>
-    <string name="company_contact">Company-Contact</string>
+    <string name="company_contact">Contact</string>
     <string name="city">City</string>
     <string name="state">State</string>
     <string name="country">Country</string>
@@ -14,4 +14,8 @@
     </string-array>
     <string name="trans_img">image</string>
     <string name="email">E-Mail ID</string>
+    <string name="internet_error">Please Check your Internet Connection</string>
+    <string name="roletext">Role</string>
+    <string name="tryagain">Try Again</string>
+    <string name="settings_nav">Go To Settings</string>
 </resources>

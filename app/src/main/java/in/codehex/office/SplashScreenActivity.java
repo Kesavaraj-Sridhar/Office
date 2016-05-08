@@ -6,7 +6,7 @@ import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
+import in.codehex.office.Internet;
 public class SplashScreenActivity extends AppCompatActivity {
 
     @Override
@@ -20,8 +20,15 @@ public class SplashScreenActivity extends AppCompatActivity {
                 }catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
-                    Intent in = new Intent(getApplicationContext(),PasscodeActivity.class);
-                    startActivity(in);
+                    if (Internet.isInternetAvailable(getApplicationContext())){
+                        Intent in = new Intent(getApplicationContext(),PasscodeActivity.class);
+                        startActivity(in);
+                    }
+                    else {
+                        Intent in = new Intent(getApplicationContext(),NetworkActivity.class);
+                        startActivity(in);
+                    }
+
                 }
             }
         };

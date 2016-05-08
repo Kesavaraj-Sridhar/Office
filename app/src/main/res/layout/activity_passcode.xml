@@ -48,6 +48,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
+            android:textColor="@drawable/button_text_color"
             fontPath="fonts/latoregular.ttf"
             android:background="@color/accent"
             android:id="@+id/submit_button"
