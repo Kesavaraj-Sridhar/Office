@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Office</string>
+    <string name="app_name">M-Office Buy</string>
     <string name="passcode">Enter Passcode</string>
     <string name="role">Select Your Role</string>
     <string name="name">Name</string>
@@ -18,4 +18,8 @@
     <string name="roletext">Role</string>
     <string name="tryagain">Try Again</string>
     <string name="settings_nav">Go To Settings</string>
+    <string name="url">URL</string>
+    <string name="street">Street</string>
+    <string name="first_name">first name</string>
+    <string name="last_name">Last Name</string>
 </resources>

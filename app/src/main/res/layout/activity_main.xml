@@ -5,35 +5,46 @@
     android:layout_height="match_parent"
     android:background="@drawable/splash"
     android:orientation="vertical"
-    android:weightSum="4"
+    android:weightSum="9"
     tools:context="in.codehex.office.MainActivity"
     tools:ignore="MissingPrefix">
 
     <ImageView
+        android:padding="@dimen/primary_padding"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_weight="1.2"
-        android:scaleType="centerCrop"
-        android:src="@drawable/offices" />
+        android:scaleType="centerInside"
+        android:layout_weight="0.74"
+        android:src="@drawable/light"/>
+
+
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_weight="2.3">
+        android:layout_weight="7.26">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/offices" />
 
             <LinearLayout
-                android:padding="@dimen/primary_padding"
+                android:padding="@dimen/secondary_padding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
                 <TextView
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/primary_text"
                     fontFamily="fonts/latobold.ttf"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
@@ -43,6 +54,7 @@
 
                 <EditText
                     android:id="@+id/name_edit_text"
+                    android:textSize="@dimen/primary_text"
                     android:singleLine="true"
                     android:textColor="@color/edit_text_color"
                     android:background="@color/edit_text_bgcolor"
@@ -56,13 +68,15 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
-                android:padding="@dimen/primary_padding"
+                android:padding="@dimen/secondary_padding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
                 <TextView
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/primary_text"
                     fontFamily="fonts/latobold.ttf"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
@@ -72,6 +86,7 @@
 
                 <EditText
                     android:id="@+id/email_id_edit_text"
+                    android:textSize="@dimen/primary_text"
                     android:singleLine="true"
                     android:textColor="@color/edit_text_color"
                     android:background="@color/edit_text_bgcolor"
@@ -86,22 +101,25 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
-                android:padding="@dimen/primary_padding"
+                android:padding="@dimen/secondary_padding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
                 <TextView
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/primary_text"
                     fontFamily="fonts/latobold.ttf"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
-                    android:text="URL"
+                    android:text="@string/url"
                     android:textColor="@color/accent" />
 
                 <EditText
                     android:id="@+id/curl_edit_text"
+                    android:textSize="@dimen/primary_text"
                     android:singleLine="true"
                     android:imeOptions="actionNext"
                     android:textColor="@color/edit_text_color"
@@ -115,13 +133,15 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
-                android:padding="@dimen/primary_padding"
+                android:padding="@dimen/secondary_padding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
                 <TextView
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/primary_text"
                     fontFamily="fonts/latobold.ttf"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
@@ -132,6 +152,7 @@
                 <EditText
                     android:id="@+id/company_contact_edit_text"
                     android:singleLine="true"
+                    android:textSize="@dimen/primary_text"
                     android:imeOptions="actionNext"
                     android:inputType="number"
                     android:maxLength="10"
@@ -146,22 +167,25 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
-                android:padding="@dimen/primary_padding"
+                android:padding="@dimen/secondary_padding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
                 <TextView
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/primary_text"
                     fontFamily="fonts/latobold.ttf"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
-                    android:text="Street"
+                    android:text="@string/street"
                     android:textColor="@color/accent" />
 
                 <EditText
                     android:imeOptions="actionNext"
+                    android:textSize="@dimen/primary_text"
                     android:singleLine="true"
                     android:id="@+id/street_edit_text"
                     android:textColor="@color/edit_text_color"
@@ -175,13 +199,15 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
-                android:padding="@dimen/primary_padding"
+                android:padding="@dimen/secondary_padding"
                 android:weightSum="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/primary_text"
                     android:layout_weight="0.75"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
@@ -190,6 +216,7 @@
                     android:textColor="@color/accent"/>
                 <EditText
                     android:id="@+id/city_edit_text"
+                    android:textSize="@dimen/primary_text"
                     android:singleLine="true"
                     android:imeOptions="actionNext"
                     android:textColor="@color/edit_text_color"
@@ -203,13 +230,15 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
-                android:padding="@dimen/primary_padding"
+                android:padding="@dimen/secondary_padding"
                 android:weightSum="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/primary_text"
                     android:layout_weight="0.75"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
@@ -218,6 +247,7 @@
                     android:textColor="@color/accent"/>
                 <EditText
                     android:id="@+id/state_edit_text"
+                    android:textSize="@dimen/primary_text"
                     android:singleLine="true"
                     android:imeOptions="actionNext"
                     android:textColor="@color/edit_text_color"
@@ -231,13 +261,15 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
-                android:padding="@dimen/primary_padding"
+                android:padding="@dimen/secondary_padding"
                 android:weightSum="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/primary_text"
                     android:layout_weight="0.75"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
@@ -246,6 +278,7 @@
                     android:textColor="@color/accent"/>
                 <EditText
                     android:id="@+id/country_edit_text"
+                    android:textSize="@dimen/primary_text"
                     android:singleLine="true"
                     android:imeOptions="actionNext"
                     android:textColor="@color/edit_text_color"
@@ -259,13 +292,15 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
-                android:padding="@dimen/primary_padding"
+                android:padding="@dimen/secondary_padding"
                 android:weightSum="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/primary_text"
                     android:layout_weight="0.75"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
@@ -274,6 +309,7 @@
                     android:textColor="@color/accent"/>
                 <EditText
                     android:id="@+id/zip_code_edit_text"
+                    android:textSize="@dimen/primary_text"
                     android:singleLine="true"
                     android:imeOptions="actionDone"
                     android:maxLength="6"
@@ -289,13 +325,15 @@
                 android:layout_height="1dp"
                 android:background="@color/divider_color"/>
             <LinearLayout
-                android:padding="@dimen/primary_padding"
+                android:padding="@dimen/secondary_padding"
                 android:weightSum="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/primary_text"
                     android:layout_weight="0.75"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
@@ -305,7 +343,7 @@
                 <Spinner
                     android:id="@+id/role_spinner"
                     android:layout_width="1dp"
-                    android:layout_weight="1"
+                    android:layout_weight="1.25"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:spinnerMode="dialog"
@@ -320,8 +358,8 @@
         android:id="@+id/submit_image_button"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_weight="0.5"
+        android:layout_weight="1"
         android:background="@color/button_bg"
-        android:src="@drawable/oksd" />
+        android:src="@drawable/nextwhite" />
 
 </LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    android:orientation="vertical"
+    android:weightSum="9"
+    tools:context="in.codehex.office.RegistrationActivity"
+    tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0.74"
+        android:padding="@dimen/primary_padding"
+        android:scaleType="centerInside"
+        android:src="@drawable/light" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="7.26"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/offices" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/secondary_padding"
+            android:weightSum="2">
+
+            <TextView
+                fontFamily="fonts/latobold.ttf"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/email"
+                android:textAllCaps="true"
+                android:textColor="@color/accent"
+                android:textSize="@dimen/primary_text" />
+
+            <EditText
+                android:id="@+id/reg_email_edit_text"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.25"
+                android:background="@color/edit_text_bgcolor"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/edit_text_color"
+                android:textSize="@dimen/primary_text" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/secondary_padding"
+            android:weightSum="2">
+
+            <TextView
+                fontFamily="fonts/latobold.ttf"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/first_name"
+                android:textAllCaps="true"
+                android:textColor="@color/accent"
+                android:textSize="@dimen/primary_text" />
+
+            <EditText
+                android:id="@+id/reg_first_name_edit_text"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.25"
+                android:background="@color/edit_text_bgcolor"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/edit_text_color"
+                android:textSize="@dimen/primary_text" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/secondary_padding"
+            android:weightSum="2">
+
+            <TextView
+                fontFamily="fonts/latobold.ttf"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/last_name"
+                android:textAllCaps="true"
+                android:textColor="@color/accent"
+                android:textSize="@dimen/primary_text" />
+
+            <EditText
+                android:id="@+id/reg_last_name_edit_text"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.25"
+                android:background="@color/edit_text_bgcolor"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textColor="@color/edit_text_color"
+                android:textSize="@dimen/primary_text" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/secondary_padding"
+            android:weightSum="2">
+
+            <TextView
+                fontFamily="fonts/latobold.ttf"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:text="@string/roletext"
+                android:textAllCaps="true"
+                android:textColor="@color/accent"
+                android:textSize="@dimen/primary_text" />
+
+            <Spinner
+                android:id="@+id/reg_role_spinner"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.25"
+                android:entries="@array/role_spinner"
+                android:prompt="@string/role"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:baselineAlignBottom="true"
+        android:id="@+id/reg_submit_image_button"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="@color/button_bg"
+        android:src="@drawable/oksd" />
+
+</LinearLayout>

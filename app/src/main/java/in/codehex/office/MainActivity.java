@@ -2,6 +2,8 @@ package in.codehex.office;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,7 +30,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Spinner roleSpinner;
-    private static String name, emailId, cUrl, roleBit, companyContact, street, city, state, country, zipcode;
+    private static String name, emailId, cUrl, roleBit, companyContact, street, city, state, country, zipcode, responsecompanyId, responseName, responseRoleId;
     private ProgressDialog pDialog;
     ImageButton submitImageButton;
     private static String TAG = MainActivity.class.getSimpleName();
@@ -56,22 +58,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         stateEditText = (EditText) findViewById(R.id.state_edit_text);
         countryEditText = (EditText) findViewById(R.id.country_edit_text);
         submitImageButton = (ImageButton) findViewById(R.id.submit_image_button);
-        if((nameEditText.getText().toString()).equals("")&&
-                (curlEditText.getText().toString()).equals("")&&
-                (companyContactEditText.getText().toString()).equals("")&&
-                (streetEditText.getText().toString()).equals("")&&
-                (cityEditText.getText().toString()).equals("")&&
-                (stateEditText.getText().toString()).equals("")&&
-                (countryEditText.getText().toString()).equals("")&&
-                (zipCodeEditText.getText().toString()).equals("")&&
-                (nameEditText.getText().toString()).equals("")){
-            //
-        }else{
-            //submitImageButton.setEnabled(true);
-        }
         submitImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Intent i = new Intent(getApplicationContext(), RegistrationActivity.class);
+                //startActivity(i);
+
                 if((nameEditText.getText().toString()).equals("")||
                         (curlEditText.getText().toString()).equals("")||
                         (companyContactEditText.getText().toString()).equals("")||
@@ -103,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         ((TextView) parent.getChildAt(0)).setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.edit_text_color));
+        //((TextView) parent.getChildAt(0)).setTextSize(R.dimen.primary_text);
 
         if(parent.getItemAtPosition(position).toString().equals("Buyer")){
             //Toast.makeText(getApplicationContext(),"Admin",Toast.LENGTH_LONG).show();
@@ -165,6 +158,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 try{
                     Toast.makeText(getApplicationContext(), response.getString("message"), Toast.LENGTH_LONG).show();
+                    responsecompanyId  = response.getString("company_id");
+                    responseName =response.getString("name");
+
+                    SharedPreferences userDetailPrefs = getSharedPreferences("company_detail", MODE_PRIVATE);
+                    SharedPreferences.Editor userDetailPrefsEditor = userDetailPrefs.edit();
+                    userDetailPrefsEditor.putString("company_id",responsecompanyId).apply();
+                    userDetailPrefsEditor.putString("name",responseName).apply();
+                    userDetailPrefsEditor.commit();
+
+
+                    Intent i = new Intent(getApplicationContext(), RegistrationActivity.class);
+                    startActivity(i);
 
                 }
                 catch(Exception e){
@@ -186,10 +191,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
         AppController.getInstance().addToRequestQueue(jsonObjectRequest);
-
-
-
-
     }
 
 
